@@ -38,7 +38,7 @@ class OportunidadeByStatusSchema(BaseModel):
 def serialize_oportunidade(oportunidade: Oportunidade):
     return {
         'id': oportunidade.id,
-        'inclusao': oportunidade.inclusao,
+        'inclusao': oportunidade.inclusao.strftime("%d/%m/%Y"),
         'titulo': oportunidade.titulo,
         'descricao': oportunidade.descricao,
         'status': oportunidade.status,
