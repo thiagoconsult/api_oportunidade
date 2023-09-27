@@ -133,8 +133,8 @@ def service_oportunidade_get_count_by_status(query: OportunidadeByStatusSchema):
         oportunidades = session.query(Oportunidade).filter(
             Oportunidade.status == query.status)
 
-        if not oportunidades:
-            return {'err': 'Nenhuma oportunidade encontrada'}, 404
+        # if not oportunidades:
+        #     return {'err': 'Nenhuma oportunidade encontrada'}, 404
 
         quantidade = 0
 
